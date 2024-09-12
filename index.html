@@ -13,9 +13,11 @@
 
     <!-- Introduction Section -->
     <section id="intro-section">
-        <h2>Welcome to My Quotes Collection</h2>
-        <p>Hi, I'm [Your Name]! Welcome to my curated collection of quotes from A to Z. Feel free to browse through and find some inspiration!</p>
-        <img src="your-picture.jpg" alt="Your Picture" class="profile-pic">
+        <p>The page was born when I lost access to the Howard Tullman website momentarily. I was gripped in fear, thinking I had lost access to his wisdom and a place where I would regularly go
+            to, to find solace. The website however still exists and can be accessed, but to save myself from future scares, I decided to document his website in entirety (to which 
+            I would also be adding as I go along and develop this page). Hopefully, this website would be a place where you may find solace too, like I do. 
+            Feel free to browse through and find some inspiration!</p>
+        <img src="myimage.jpg" alt="Pankaj Vig Picture" class="profile-pic">
     </section>
     
     <section class="alphabet-buttons">
@@ -48,10 +50,17 @@
         <button onclick="showQuotes('Z')">Z</button>
     </section>
 
-    <section id="quotes-section">
-        <!-- This section will show the quotes dynamically -->
-        <h2>Quotes</h2>
+    <!-- Quotes Section (Initially Hidden) -->
+    <section id="quotes-section" style="display: none;">
+
+        <!-- Search Input -->
+        <input type="text" id="search-input" onkeyup="searchQuotes()" placeholder="Search quotes...">
+
+        <!-- Quotes List -->
         <ul id="quotes-list"></ul>
+
+        <!-- Pagination Controls -->
+        <div id="pagination-controls"></div>
     </section>
 
     <script src="script.js"></script>

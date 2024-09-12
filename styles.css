@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center; /* Centering header, buttons, etc. */
+    text-align: center;
 }
 
 .alphabet-buttons {
@@ -16,13 +16,24 @@ button {
 
 #intro-section {
     margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .profile-pic {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Makes the picture circular */
-    margin-top: 10px;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.intro-content {
+    flex-grow: 1;
 }
 
 #quotes-section {
@@ -35,18 +46,34 @@ button {
 ul {
     list-style-type: none;
     padding: 0;
-    text-align: left; /* Makes sure quotes section is left-aligned */
+    text-align: left;
 }
 
 li {
     font-size: 18px;
     margin: 5px 0;
-    text-align: left; /* Ensures each quote is left-aligned */
+    text-align: left;
 }
 
-/* Ensuring the quote section remains left-aligned even on larger screens */
-@media (min-width: 600px) {
+@media (max-width: 600px) {
+    #intro-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .intro-content h2 {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 601px) {
     #quotes-section {
-        text-align: left; /* Forces left alignment for larger screens */
+        text-align: left;
     }
 }
