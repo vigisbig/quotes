@@ -18,6 +18,13 @@ const quotes = {
 
 // Function to display quotes based on letter
 function showQuotes(letter) {
+    // Hide the intro section
+    document.getElementById('intro-section').style.display = 'none';
+
+    // Show the quotes section
+    const quotesSection = document.getElementById('quotes-section');
+    quotesSection.style.display = 'block';
+
     const quotesList = document.getElementById('quotes-list');
     quotesList.innerHTML = ''; // Clear existing quotes
 

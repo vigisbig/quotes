@@ -14,6 +14,17 @@ button {
     cursor: pointer;
 }
 
+#intro-section {
+    margin-top: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the picture circular */
+    margin-top: 10px;
+}
+
 #quotes-section {
     margin-top: 30px;
     max-width: 800px;
