@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: center; /* Centering header, buttons, etc. */
 }
 
 .alphabet-buttons {
@@ -16,8 +16,7 @@ button {
 
 #quotes-section {
     margin-top: 30px;
-    text-align: left; /* Aligns the entire section to the left */
-    max-width: 800px; /* Optional: Limits width for better readability */
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -25,6 +24,7 @@ button {
 ul {
     list-style-type: none;
     padding: 0;
+    text-align: left; /* Makes sure quotes section is left-aligned */
 }
 
 li {
@@ -33,3 +33,9 @@ li {
     text-align: left; /* Ensures each quote is left-aligned */
 }
 
+/* Ensuring the quote section remains left-aligned even on larger screens */
+@media (min-width: 600px) {
+    #quotes-section {
+        text-align: left; /* Forces left alignment for larger screens */
+    }
+}
