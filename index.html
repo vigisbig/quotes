@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes A-Z</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Browse Quotes by Letter</h1>
+    </header>
+    
+    <section class="alphabet-buttons">
+        <button onclick="showQuotes('A')">A</button>
+        <button onclick="showQuotes('B')">B</button>
+        <!-- Repeat for A-Z -->
+        <button onclick="showQuotes('Z')">Z</button>
+    </section>
+
+    <section id="quotes-section">
+        <!-- This section will show the quotes dynamically -->
+        <h2>Quotes</h2>
+        <ul id="quotes-list"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
