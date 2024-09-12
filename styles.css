@@ -77,3 +77,15 @@ li {
         text-align: left;
     }
 }
+
+#pagination-controls button {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#pagination-controls button.active {
+    background-color: #4CAF50;
+    color: white;
+}
