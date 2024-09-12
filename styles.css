@@ -16,6 +16,10 @@ button {
 
 #quotes-section {
     margin-top: 30px;
+    text-align: left; /* Aligns the entire section to the left */
+    max-width: 800px; /* Optional: Limits width for better readability */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ul {
@@ -26,4 +30,5 @@ ul {
 li {
     font-size: 18px;
     margin: 5px 0;
+    text-align: left; /* Ensures each quote is left-aligned */
 }
