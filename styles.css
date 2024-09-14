@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     text-align: center;
 }
 
@@ -19,16 +19,13 @@ button.selected {
     color: white;
 }
 
-/* #pagination-controls {
-    margin: 20px 0;
-} */
-
 #intro-section {
     margin-top: 20px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    font-size: 20px;
     align-items: flex-start;
     text-align: left;
 }
@@ -49,6 +46,7 @@ button.selected {
     margin-top: 30px;
     max-width: 800px;
     margin-left: auto;
+    font-size: 30px;
     margin-right: auto;
 }
 
