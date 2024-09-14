@@ -1,17 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     text-align: center;
 }
 
 .alphabet-buttons {
-    margin: 20px 0;
+    margin: 22px 0;
 }
 
 button {
-    margin: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
+    margin: 3px;
+    padding: 15px 15px;
     cursor: pointer;
+}
+
+button.selected {
+    background-color: #4CAF50;
+    color: white;
 }
 
 #intro-section {
@@ -20,6 +24,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    font-size: 20px;
     align-items: flex-start;
     text-align: left;
 }
@@ -40,18 +45,21 @@ button {
     margin-top: 30px;
     max-width: 800px;
     margin-left: auto;
+    font-size: 30px;
     margin-right: auto;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    font-size: 30px;
     text-align: left;
 }
 
 li {
     font-size: 18px;
     margin: 5px 0;
+    font-size: 30px;
     text-align: left;
 }
 
@@ -110,4 +118,26 @@ li {
 /* Show the button when the page is scrolled */
 body.scrolled #scroll-to-top-btn {
     display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    margin: 5px 0;
+    text-align: left;
+}
+
+#quotes-section ul {
+    font-size: 20px;
+    line-height: 0.9;       /*Distance between same line of text that flows to other line*/
+    margin-top: 40px;
+}
+
+#quotes-section li {
+    font-size: 20px;
+    margin: 5px 0;
 }
