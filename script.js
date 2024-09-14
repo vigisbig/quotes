@@ -4775,11 +4775,14 @@ let currentQuotes = [];
 
 // Function to display quotes based on the selected letter
 function showQuotes(letter) {
-    // Hide the intro section and show the quotes section
+    document.querySelectorAll('.alphabet-buttons button').forEach(button => {
+        button.classList.remove('selected');
+    });
+    event.target.classList.add('selected');
+
     document.getElementById('intro-section').style.display = 'none';
     document.getElementById('quotes-section').style.display = 'block';
-
-    // Set the quotes for the selected letter
+    
     currentQuotes = quotes[letter] || [];
     currentPage = 1; // Reset to the first page
     displayPaginatedQuotes();
@@ -4788,40 +4791,34 @@ function showQuotes(letter) {
 // Function to display the quotes for the current page
 function displayPaginatedQuotes() {
     const quotesList = document.getElementById('quotes-list');
-    quotesList.innerHTML = ''; // Clear existing quotes
+    quotesList.innerHTML = '';
 
-    // Get the quotes for the current page
     const startIndex = (currentPage - 1) * quotesPerPage;
     const endIndex = Math.min(startIndex + quotesPerPage, currentQuotes.length);
     const paginatedQuotes = currentQuotes.slice(startIndex, endIndex);
 
-    // Display the paginated quotes
     paginatedQuotes.forEach((quote) => {
         const li = document.createElement('li');
         li.textContent = quote;
         quotesList.appendChild(li);
     });
 
-    // Update pagination controls
     updatePaginationControls();
 }
 
 // Function to create and display pagination controls
 function updatePaginationControls() {
     const paginationControls = document.getElementById('pagination-controls');
-    paginationControls.innerHTML = ''; // Clear existing controls
+    paginationControls.innerHTML = '';
 
     const totalPages = Math.ceil(currentQuotes.length / quotesPerPage);
 
-    console.log('Total Pages:', totalPages); // Debugging line
-
-    // Only show pagination if more than one page exists
     if (totalPages > 1) {
         for (let i = 1; i <= totalPages; i++) {
             const button = document.createElement('button');
             button.textContent = i;
             if (i === currentPage) {
-                button.classList.add('active');  // Only add 'active' class for the current page
+                button.classList.add('active');
             }
             button.addEventListener('click', () => {
                 currentPage = i;
@@ -4836,20 +4833,19 @@ function updatePaginationControls() {
 // Function to filter quotes based on a search term
 function searchQuotes() {
     const searchTerm = document.getElementById('search-input').value.toLowerCase();
-    
-    // Filter current quotes by search term
-    const filteredQuotes = currentQuotes.filter(quote => 
+    const allQuotes = Object.values(quotes).flat();  // Search across all alphabets
+
+    const filteredQuotes = allQuotes.filter(quote =>
         quote.toLowerCase().includes(searchTerm)
     );
-    
-    // Update quotes list based on the search result
+
     displayFilteredQuotes(filteredQuotes);
 }
 
 // Function to display filtered quotes
 function displayFilteredQuotes(filteredQuotes) {
     const quotesList = document.getElementById('quotes-list');
-    quotesList.innerHTML = ''; // Clear existing quotes
+    quotesList.innerHTML = '';
 
     if (filteredQuotes.length > 0) {
         filteredQuotes.forEach((quote) => {
@@ -4858,15 +4854,27 @@ function displayFilteredQuotes(filteredQuotes) {
             quotesList.appendChild(li);
         });
     } else {
-        // If no quotes match the search term
         const li = document.createElement('li');
         li.textContent = 'No quotes found.';
         quotesList.appendChild(li);
     }
 
-    // Hide pagination controls when search is active
     document.getElementById('pagination-controls').style.display = 'none';
 }
+
+// Scroll to top functionality
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show scroll to top button only when the page is scrolled
+window.onscroll = function() {
+    if (document.documentElement.scrollTop > 100) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+};
 
 // Initialize the default state when the page loads
 function init() {

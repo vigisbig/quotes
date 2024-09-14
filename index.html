@@ -50,18 +50,17 @@
         <button onclick="showQuotes('Z')">Z</button>
     </section>
 
-    <!-- Quotes Section (Initially Hidden) -->
+    <!-- Pagination Controls (Moved Below Alphabet Buttons) -->
+    <div id="pagination-controls"></div>
+
+    <!-- Quotes Section -->
     <section id="quotes-section" style="display: none;">
-
-        <!-- Search Input -->
         <input type="text" id="search-input" onkeyup="searchQuotes()" placeholder="Search quotes...">
-
-        <!-- Quotes List -->
         <ul id="quotes-list"></ul>
-
-        <!-- Pagination Controls -->
-        <div id="pagination-controls"></div>
     </section>
+
+    <!-- Floating Button to Scroll to Top -->
+    <button onclick="scrollToTop()" id="scroll-to-top-btn">Top</button>
 
     <script src="script.js"></script>
 </body>
