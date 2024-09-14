@@ -1,16 +1,16 @@
 body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-align: center;
-    font-size: 25px;
 }
 
 .alphabet-buttons {
-    margin: 1px 0;
+    margin: 20px 0;
 }
 
 button {
-    margin: 4px;
+    margin: 5px;
     padding: 10px 15px;
+    font-size: 15px;
     cursor: pointer;
 }
 
