@@ -4,13 +4,12 @@ body {
 }
 
 .alphabet-buttons {
-    margin: 20px 0;
+    margin: 22px 0;
 }
 
 button {
     margin: 5px;
     padding: 10px 15px;
-    font-size: 15px;
     cursor: pointer;
 }
 
