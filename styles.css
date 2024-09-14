@@ -5,11 +5,11 @@ body {
 }
 
 .alphabet-buttons {
-    margin: 19px 0;
+    margin: 1px 0;
 }
 
 button {
-    margin: 7px;
+    margin: 4px;
     padding: 10px 15px;
     cursor: pointer;
 }
