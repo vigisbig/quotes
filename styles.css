@@ -1,16 +1,16 @@
 body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-align: center;
+    font-size: 25px;
 }
 
 .alphabet-buttons {
-    margin: 20px 0;
+    margin: 19px 0;
 }
 
 button {
-    margin: 5px;
+    margin: 7px;
     padding: 10px 15px;
-    font-size: 16px;
     cursor: pointer;
 }
 
@@ -53,12 +53,14 @@ button.selected {
 ul {
     list-style-type: none;
     padding: 0;
+    font-size: 30px;
     text-align: left;
 }
 
 li {
     font-size: 18px;
     margin: 5px 0;
+    font-size: 30px;
     text-align: left;
 }
 
@@ -126,7 +128,17 @@ ul {
 }
 
 li {
-    font-size: 18px;
     margin: 5px 0;
     text-align: left;
+}
+
+#quotes-section ul {
+    font-size: 20px;
+    line-height: 0.9;       /*Distance between same line of text that flows to other line*/
+    margin-top: 40px;
+}
+
+#quotes-section li {
+    font-size: 20px;
+    margin: 5px 0;
 }
